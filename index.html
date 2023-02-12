@@ -3,11 +3,54 @@
 
 <head>
     <meta charset=utf-8/>
+    <!-- link to style sheet -->
+    <link rel = "stylesheet" href = "style.css">
 </head>
 
 
 <body>
+    <h1>hw-04: Event Handling </h1>
 
+    <!-- create 2 columns -->
+    <div class="row">
+        <div class="left">
+            <!-- add scatter plot --> 
+            <svg class="graph">
+              <!-- create axis lines -->
+              <g class="grid x-line">
+                <line x1="80" x2="80" y1="360" y2="100"></line>
+              </g>
+              <g class="grid y-line">
+                <line x1="360" x2="78" y1="360" y2="360"></line>
+              </g>
+              <!-- make data points -->
+              <g class="data">
+                <circle cx="100" cy="325" r="6"></circle>
+                <circle cx="118" cy="290" r="6"></circle>
+                <circle cx="214" cy="325" r="6"></circle>
+                <circle cx="262" cy="195" r="6"></circle>
+              </g>
+            </svg>
+        </div>
+
+        <div class="right"></div>
+
+    </div>
+
+
+ <!--acknowledgments-->
+
+
+    <h1>Acknowledgments </h1>
+    <ul>
+         <li><a href="https://www.w3schools.com/html/default.asp">HTML Tutorial on W3 Schools</a></li>
+         <li><a href = "https://css-tricks.com/snippets/css/a-guide-to-flexbox/">How to use Flexbox</a></li>
+         <li><a href = "https://www.geeksforgeeks.org/html-svg-basics/?ref=lbp">HTML Graphics - SVG's</a></li>
+    </ul>
+    </div>
+
+    <!-- link jsfile -->
+    <script src="main.js"></script>
 
 </body>
 

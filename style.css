@@ -1,0 +1,47 @@
+/*style sheet for hw4*/
+body{
+	font-family: Arial;
+}
+
+h1{
+	text-align: center;
+}
+
+/* make columns */
+.row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  background-color:lightblue;
+
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  background-color:green;
+
+
+}
+
+.graph {
+  height: 500px;
+  width: 800px;
+}
+
+.graph .grid {
+  stroke: black;
+  stroke-dasharray: 0;
+  stroke-width: 4;
+ }
+.data{
+	fill: blue;
+	stroke-width:1;
+}
