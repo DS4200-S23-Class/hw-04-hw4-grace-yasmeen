@@ -41,7 +41,13 @@ h1{
   stroke-dasharray: 0;
   stroke-width: 4;
  }
-.data{
+ 
+circle {
 	fill: blue;
 	stroke-width:1;
 }
+
+circle:hover{
+  fill: yellow;
+}
+
