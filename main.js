@@ -36,12 +36,14 @@ function addPoint()
 	// add new points
 	 let xcord = (document.getElementById("x-option").value * 40) + 10
 	 let ycord = ((9 - document.getElementById("y-option").value) * 40) + 30
-
+	 let r = 8; 
 	 // add point to graph
-	 let graph = document.getElementById("graph");
-	 graph.innerHTML += "<circle "+' cx=' + xcord + "' cy='" + ycord + "' r='6'></circle>"
-
+	 let g = document.getElementById("data");
+	 g.innerHTML += "<circle "+" cx=" + xcord + " cy=" + ycord +  " r=" + r + "></circle>"
 }
 
+
 document.getElementById("addCircle").addEventListener("click",addPoint);
+
+
 
