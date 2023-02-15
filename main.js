@@ -1,34 +1,47 @@
 // JS file for hw-04
 
+
+let vals = document.getElementById("data");
+let vals_children = vals.children;
+
+// convert val children to array
+let circle_array = Array.from(vals_children); 
+
+
 // function for changing border of shape and printing point
 function circleClick()
 {
-	let vals = document.getElementsByClassName("data");
-	for(let i = 0; i< vals.length; i++)
-	{
-		// if clicked
-		if(vals[i].checked){
-			console.log(vals[i].value)
-			// add border color
-			//add border
-			document.getElementById("data").style.border.toggle = "green"; 
 
-			// update text
-			let newText = "Last point clicked: " + "(" + vals[i].value + ")";
-			document.getElementById("selected-point").innerHTML = newText;
-		}
-	}
+		// add border
+		this.classList.toggle("borderitem");
+
+		//update text
+		let xcord = (this.getAttribute("cx") - 10) / 40
+		let ycord = 9 - ((this.getAttribute("cy") - 30) / 40)
+		let newText = "Last point clicked: (" + xcord +","+ ycord + ")";	
+		document.getElementById("selected-point").innerHTML = newText;
+
+} //end of function
+
+//  add event handler for each circle 
+for(let i = 0; i<circle_array.length; i++)
+{
+	circle_array[i].addEventListener("click",circleClick);
 }
 
-// add event handler for circle click function
-document.getElementsByClassName(vals[i].addEventListener("click", circleClick))
 
-
-// add point to grid
+//  add point to grid
 function addPoint()
 {
+	// add new points
+	 let xcord = (document.getElementById("x-option").value * 40) + 10
+	 let ycord = ((9 - document.getElementById("y-option").value) * 40) + 30
 
+	 // add point to graph
+	 let graph = document.getElementById("graph");
+	 graph.innerHTML += "<circle "+' cx=' + xcord + "' cy='" + ycord + "' r='6'></circle>"
 
 }
 
-document.getElementById("addCircle").addEventListener("click",addPoint())
+document.getElementById("addCircle").addEventListener("click",addPoint);
+

@@ -18,26 +18,28 @@
             <svg class="graph">
               <!-- create axis lines -->
               <g class="grid x-line">
-                <line x1="80" x2="80" y1="360" y2="100"></line>
+                <line x1="30" x2="30" y1="360" y2="28"></line>
               </g>
               <g class="grid y-line">
-                <line x1="360" x2="78" y1="360" y2="360"></line>
+                <line x1="400" x2="28" y1="360" y2="360"></line>
               </g>
               <!-- make data points -->
-              <g class="data">
-                <circle cx="100" cy="325" r="6"></circle>
-                <circle cx="118" cy="290" r="6"></circle>
-                <circle cx="214" cy="325" r="6"></circle>
-                <circle cx="262" cy="195" r="6"></circle>
+              <g id="data">
+                <circle cx="50" cy="310" r="8"></circle>
+                <circle cx="90" cy="230" r="8"></circle>
+                <circle cx="250" cy="310" r="8"></circle>
+                <circle cx="370" cy="30" r="8"></circle>
               </g>
             </svg>
         </div>
 
         <!-- create options -->
         <div class="right">
+             <div class="text" id="selected-point">
+            </div>  
             <div class="custom-select" style="width:700px;">
                 <p> Select the x coordinate for the point you want to add.</p>
-                <select>
+                <select id = "x-option">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -51,7 +53,7 @@
             </div>
             <div class="custom-select" style="width:700px;">
                 <p> Select the y coordinate for the point you want to add.</p>
-                <select>
+                <select id = "y-option">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -65,15 +67,14 @@
             </div>
             <div>
                 <!-- add button -->
-                <button type="button" id="subButton2">Add Point</button>
+                <button type="button" id="addCircle">Add Point</button>
             </div>
         </div>
 
     </div>
 
 
- <!--acknowledgments-->
-
+ <!--acknowledgments--> 
 
     <h1>Acknowledgments </h1>
     <ul>

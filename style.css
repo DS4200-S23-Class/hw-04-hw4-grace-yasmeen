@@ -41,6 +41,7 @@ h1{
   stroke-width: 4;
  }
  
+/* circle style */ 
 circle {
 	fill: blue;
 	stroke-width:1;
@@ -48,5 +49,11 @@ circle {
 
 circle:hover{
   fill: orange;
+}
+
+/* border for circle */
+.borderitem{
+  stroke: limegreen;
+  stroke-width: 3;
 }
 
